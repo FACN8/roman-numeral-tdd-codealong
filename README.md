@@ -3,6 +3,10 @@ A code-along roman numeral converter solution for teaching test-driven developme
 
 ![](https://user-images.githubusercontent.com/9408641/27486919-ff03ee94-5829-11e7-9692-75aa238c8c35.png)
 
+## Screencast
+
+You can watch me work through this here (coming soon!)
+
 ## Learning outcomes
 
 + Understand how to use TDD effectively
