@@ -5,7 +5,7 @@ A code-along roman numeral converter solution for teaching test-driven developme
 
 ## Screencast
 
-You can watch me work through this here (coming soon!)
+You can watch me code this on [YouTube](https://youtu.be/7qEXPwG71RI)!
 
 ## Learning outcomes
 
