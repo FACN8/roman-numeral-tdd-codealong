@@ -5,9 +5,9 @@ A code-along roman numeral converter solution for teaching test-driven developme
 
 ## Learning outcomes
 
-+ Understanding how to do TDD effectively
++ Understand how to use TDD effectively
 + Use the 'red, green, refactor' cycle
 + See how TDD helps us reach the final solution
-+ How to create an accessible `<form>` and listen for the submit event
++ Create an accessible `<form>` and listen for the submit event
 
 Huge credit to [Ray Sinnema](https://remonsinnema.com/2011/12/05/practicing-tdd-using-the-roman-numerals-kata/) for the TDD method to work towards this solution.
