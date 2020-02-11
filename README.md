@@ -4,9 +4,8 @@ A code-along roman numeral converter solution for teaching test-driven developme
 ![](https://user-images.githubusercontent.com/9408641/27486919-ff03ee94-5829-11e7-9692-75aa238c8c35.png)
 
 ## Screencast
-You can watch me code this on [YouTube](https://youtu.be/7qEXPwG71RI)!
 
-(Remember this workshop uses Jest, not Tape)
+You can watch me code this on [YouTube](https://youtu.be/7qEXPwG71RI)!
 
 ## Learning outcomes
 
