@@ -1,91 +1,107 @@
+var test = require('tape');
 var romanizer = require('./romanizer');
 
-test('Jest is up and running', function() {
-  expect(1).toBe(1);
+test('Tape is up and running', function(t) {
+  t.equal(1, 1, 'One should equal one');
+  t.end();
 });
 
-test('Romanizer returns a string', function() {
+test('Romanizer returns a string', function(t) {
   var actual = typeof romanizer(2);
   var expected = 'string';
-  expect(actual).toBe(expected);
+  t.equal(actual, expected, 'Output should be a string');
+  t.end();
 });
 
-test('Romanizer returns the correct result', function() {
+test('Romanizer returns the correct result', function(t) {
   var actual = romanizer(0);
   var expected = 'The Romans had no representation for less than 1';
-  expect(actual).toBe(expected);
+  t.equal(actual, expected, 'Zero should have no equivalent Roman numeral');
+  t.end();
 });
 
-// test('Romanizer returns the correct result', function() {
+// test('Romanizer returns the correct result', function(t) {
 //   var actual = romanizer(1);
 //   var expected = 'I';
-//   expect(actual).toBe(expected);
+//   t.equal(actual, expected, 'One should convert to I');
+//   t.end();
 // });
 //
-// test('Romanizer returns the correct result', function() {
+// test('Romanizer returns the correct result', function(t) {
 //   var actual = romanizer(2);
 //   var expected = 'II';
-//   expect(actual).toBe(expected);
+//   t.equal(actual, expected, 'Two should convert to II');
+//   t.end();
 // });
 //
-// test('Romanizer returns the correct result', function() {
+// test('Romanizer returns the correct result', function(t) {
 //   var actual = romanizer(3);
 //   var expected = 'III';
-//   expect(actual).toBe(expected);
+//   t.equal(actual, expected, 'Three should convert to III');
+//   t.end();
 // });
 //
-// test('Romanizer returns the correct result', function() {
+// test('Romanizer returns the correct result', function(t) {
 //   var actual = romanizer(4);
 //   var expected = 'IV';
-//   expect(actual).toBe(expected);
+//   t.equal(actual, expected, 'Four should convert to IV');
+//   t.end();
 // });
 //
-// test('Romanizer returns the correct result', function() {
+// test('Romanizer returns the correct result', function(t) {
 //   var actual = romanizer(5);
 //   var expected = 'V';
-//   expect(actual).toBe(expected);
+//   t.equal(actual, expected, 'Five should convert to V');
+//   t.end();
 // });
 //
-// test('Romanizer returns the correct result', function() {
+// test('Romanizer returns the correct result', function(t) {
 //   var actual = romanizer(6);
 //   var expected = 'VI';
-//   expect(actual).toBe(expected);
+//   t.equal(actual, expected, 'Six should convert to VI');
+//   t.end();
 // });
 //
-// test('Romanizer returns the correct result', function() {
+// test('Romanizer returns the correct result', function(t) {
 //   var actual = romanizer(7);
 //   var expected = 'VII';
-//   expect(actual).toBe(expected);
+//   t.equal(actual, expected, 'Seven should convert to VII');
+//   t.end();
 // });
 //
-// test('Romanizer returns the correct result', function() {
+// test('Romanizer returns the correct result', function(t) {
 //   var actual = romanizer(8);
 //   var expected = 'VIII';
-//   expect(actual).toBe(expected);
+//   t.equal(actual, expected, 'Eight should convert to VIII');
+//   t.end();
 // });
 //
-// test('Romanizer returns the correct result', function() {
+// test('Romanizer returns the correct result', function(t) {
 //   var actual = romanizer(9);
 //   var expected = 'IX';
-//   expect(actual).toBe(expected);
+//   t.equal(actual, expected, 'Nine should convert to IX');
+//   t.end();
 // });
 //
-// test('Romanizer returns the correct result', function() {
+// test('Romanizer returns the correct result', function(t) {
 //   var actual = romanizer(10);
 //   var expected = 'X';
-//   expect(actual).toBe(expected);
+//   t.equal(actual, expected, 'Ten should convert to X');
+//   t.end();
 // });
 //
-// test('Romanizer returns the correct result', function() {
+// test('Romanizer returns the correct result', function(t) {
 //   var actual = romanizer(11);
 //   var expected = 'XI';
-//   expect(actual).toBe(expected);
+//   t.equal(actual, expected, 'Eleven should convert to XI');
+//   t.end();
 // });
 //
-// test('Romanizer returns the correct result', function() {
+// test('Romanizer returns the correct result', function(t) {
 //   var actual = romanizer(30);
 //   var expected = 'XXX';
-//   expect(actual).toBe(expected);
+//   t.equal(actual, expected, '30 should convert to XXX');
+//   t.end();
 // });
 
 var values = [
@@ -189,9 +205,14 @@ var values = [
 ];
 
 values.forEach(function(value) {
-  test('Romanizer returns the correct result', function() {
+  test('Romanizer returns the correct result', function(t) {
     var actual = romanizer(value.arabic);
     var expected = value.roman;
-    expect(actual).toBe(expected);
+    t.equal(
+      actual,
+      expected,
+      value.arabic + ' should convert to ' + value.roman
+    );
+    t.end();
   });
 });
